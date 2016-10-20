@@ -1,24 +1,17 @@
 import { Component } from '@angular/core';
-
-// Book Type
-export class Book {
-  title: Number;
-  cover: String;
-  category: String;
-}
-
-// TODO: Category Type
-export class Category {}
+import {mockBooks} from "./mocks/books";
+import {mockCategories} from "./mocks/categories";
+import Book from "./mocks/books";
+import Category from "./mocks/categories";
 
 @Component({
   selector: 'bookstore',
   // template: ``,
   templateUrl: '../app/app.template.html'
 })
-
 export class AppComponent {
-  books: Book [] = []; // use mocks data instead
-  categories: String [] = ['All', 'Web']; // use mocks data instead
+  books: Book [] = mockBooks;
+  categories: Category [] = mockCategories;
   navClosed: Boolean = true;
 
   clicked() {
